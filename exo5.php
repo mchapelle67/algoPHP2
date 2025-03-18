@@ -11,13 +11,26 @@
     afficherInput($nomsInput);
 </p>
 
-<form method="get" action="">
-    <label for="nom">Nom</label> : <input type="text" id="nom" name="nom">
-    <label for="prénom">Prénom</label> : <input type="text" id="prénom" name="prénom">
-    <label for="ville">Ville</label> : <input type="text" id="ville" name="ville">
-</form>
+<style>
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
 
 <?php
 
 $nomInput = ["Nom", "Prénom", "Ville"];
-    afficherInput($nomsInput);
+    
+function afficherInput($nomInput){
+    $resultat = "<form method='get' action=''>";
+         foreach ($nomInput as $infos) {
+            $resultat .= "<label for='$infos'>$infos: </label>  
+                            <input type='text'' id=$infos: name='$infos'>";         
+            }
+        $resultat .= "</form>";   
+            return $resultat;
+}
+
+echo afficherInput($nomInput);

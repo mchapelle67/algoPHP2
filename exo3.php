@@ -1,8 +1,14 @@
 <h1>Exercice 3</h1>
 
 <p>
-    Afficher un lieu hypertext permettant d'accéder au site d'Elan formation. Le lien devra s'ouvrir dans un 
+    Afficher un lien hypertexte permettant d'accéder au site d'Elan formation. Le lien devra s'ouvrir dans un 
     nouvel onglet. 
 </p>
 
-<a target="_blank" href = https://elan-formation.fr/accueil>Accueil Elan Formation
+<?php
+
+
+$url = "https://elan-formation.fr/accueil";
+echo "<a href=$url target=_'blank'>Lien vers le site Elan</a>";
+
+
